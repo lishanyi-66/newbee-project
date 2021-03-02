@@ -1,25 +1,42 @@
 <template>
-  <div class="nav-list-item">
-      <slot name='nav-icon'></slot>
-      <slot name='nav-name'></slot>
+  <div class="nav-list-item " @click="itemClick" :class="{active:isActive}">
+    <div v-if='!isActive' class="nav-list-icon">
+        <slot name='nav-icon'></slot>
+    </div>
+    <div v-else class="nav-list-icon">
+      <slot name="nav-icon-active"></slot>
+    </div>
+    <div>
+        <slot name='nav-name'></slot>
+    </div>  
+      
   </div>
 </template>
 
 <script>
   export default {
+    props:{
+      path:String
+    },
   data() {
     return {
-
+      // isActive:true
     };
   },
-  created() {
-
-  },
+  
   mounted() {
-
+    
+  },
+  computed:{
+    isActive(){
+      return this.$route.path.indexOf(this.path)!==-1
+    }
   },
   methods: {
-
+    itemClick(){
+      this.$router.replace(this.path)
+      
+    }
   },
 }
 </script>
@@ -27,7 +44,10 @@
 <style lang='less' scoped>
 .nav-list-item{
     text-align: center;
-    margin-top: 2px;
+  .nav-list-icon{
+    font-size: 20px;
+  }  
 }
+
 
 </style>

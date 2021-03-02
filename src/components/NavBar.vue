@@ -1,25 +1,26 @@
 <template>
   <div class="nav-bar">
-    <div class="nav-list">
-      
-        <nav-bar-item class="active">
-          <van-icon name="wap-home-o"  size="22" slot="nav-icon"/>
-          <div slot="nav-name">首页</div>
-        </nav-bar-item>
-        <nav-bar-item>
-          <van-icon name="wap-home-o"  size="22" slot="nav-icon"/>
+    <div class="nav-list" >
+            <nav-bar-item  path='/home'>
+               <icon-svg icon-class="shouye" slot="nav-icon"></icon-svg>
+               <icon-svg icon-class='shouyefill' slot="nav-icon-active"></icon-svg>
+              <div slot="nav-name">首页</div>
+            </nav-bar-item>
+        
+        <nav-bar-item path='/category'>
+          <icon-svg icon-class="qiapianxingshi" slot="nav-icon"></icon-svg>
+          <icon-svg icon-class="qiapianxingshi" slot="nav-icon-active"></icon-svg>
+
           <div slot="nav-name">分类</div>
         </nav-bar-item>
-        <nav-bar-item>
-          <div slot="nav-icon">
-            <van-icon name="wap-home-o"  size="22"/>
-          </div>
+        <nav-bar-item  path='/cart'>
+          <icon-svg icon-class="31gouwuche" slot="nav-icon"></icon-svg>
+          <icon-svg icon-class='31gouwuchexuanzhong' slot="nav-icon-active"/>
           <div slot="nav-name">购物车</div>
         </nav-bar-item>
-        <nav-bar-item>
-          <div slot="nav-icon">
-            <van-icon name="wap-home-o"  size="22"/>
-          </div>
+        <nav-bar-item path='/user'>
+         <icon-svg icon-class="31wode" slot="nav-icon"></icon-svg>
+        <icon-svg icon-class='31wodexuanzhong' slot="nav-icon-active"></icon-svg>
           <div slot="nav-name">我的</div>
         </nav-bar-item>
       
@@ -30,8 +31,9 @@
 
 <script>
 import NavBarItem from './NavBarItem.vue'
+import IconSvg from './icon/IconSvg.vue'
 export default {
-  components: { NavBarItem },
+  components: { NavBarItem,IconSvg,},
 
 }
 </script>
@@ -54,6 +56,10 @@ export default {
   align-items: center;
   // color: white;
   font-size: 10px;
+  margin-top: 2px;
+ .active{
+    color: tomato;
+ }
 }
 
 </style>

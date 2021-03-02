@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div>首页</div>
     <nav-bar></nav-bar>
   </div>
 </template>
