@@ -34,11 +34,12 @@ export default {
   padding: 10px;
   font-size: 20px;
   height: 22px;
-  background-color: #eee;
-  .simple-header-name {
-    // text-align: center;
-    // margin: auto;
-    // flex: 1;
-  }
+  // background-color: #eee;
+  border-bottom: 1px solid #eee;
+  // .simple-header-name {
+  //   // text-align: center;
+  //   // margin: auto;
+  //   // flex: 1;
+  // }
 }
 </style>
