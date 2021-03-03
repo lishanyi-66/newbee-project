@@ -95,14 +95,15 @@ export default {
     font-size: 12px;
   }
   .line-logo{
-    padding: 10px 40px;
+    margin-top: 10px;
+    padding: 10px 50px;
     font-size: 24px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     span{
       display: block;
-      font-size: 10px;
+      font-size: 8px;
     }
     
   }
@@ -110,7 +111,7 @@ export default {
     padding-left: 20px;
   }
   .third-party-login{
-    margin-top:180px;
+    margin-top:160px;
   }
 }
 </style>
