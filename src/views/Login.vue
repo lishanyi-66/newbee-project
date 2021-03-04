@@ -33,7 +33,7 @@
     <!-- 同意协议 -->
     <div class="agree-protocol">
       <van-radio-group v-model="radio" class="">
-        <van-radio name="" icon-size="14px"
+        <van-radio name="1" icon-size="14px" @click="clickradio"
           >同意 <a href="">《商城隐私政策》</a>
           <a href="">《用户授权须知》</a></van-radio
         >
@@ -81,7 +81,13 @@ export default {
     return {
       username:'',
       password:'',
-      radio:'1'
+      radio:'0'
+    }
+  },
+  methods:{
+    clickradio(){
+      this.name=""
+      console.log('点击了')
     }
   }
 };
