@@ -1,6 +1,6 @@
 <template>
-  <div class="simple-header">
-    <icon-svg icon-class="close" @click="goBack"></icon-svg>
+  <div class="simple-header" @click="goback()">
+    <icon-svg icon-class="close"></icon-svg>
     <!-- <div class="simple-header-name">{{ name }}</div> -->
     <!-- <div>11</div> -->
   </div>
@@ -17,8 +17,8 @@ export default {
     },
   },
   methods: {
-    goBack() {
-      this.$router.go(-1);
+    goback() {
+      this.$router.push("/home");
     },
   },
 };
@@ -37,9 +37,7 @@ export default {
   // background-color: #eee;
   border-bottom: 1px solid #eee;
   // .simple-header-name {
-  //   // text-align: center;
-  //   // margin: auto;
-  //   // flex: 1;
+  //   text-align: center;
   // }
 }
 </style>

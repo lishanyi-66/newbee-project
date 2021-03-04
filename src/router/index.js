@@ -8,31 +8,31 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/home',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
-    path:'/',
-    redirect:'/home'
+    path: '/',
+    redirect: '/home'
   },
   {
-    path:'/category',
-    name:'category',
-    component:()=>import('../views/Category.vue')
-  },{
-    path:'/cart',
-    name:'cart',
-    component:()=>import('../views/Cart.vue')
+    path: '/category',
+    name: 'category',
+    component: () => import('../views/Category.vue')
+  }, {
+    path: '/cart',
+    name: 'cart',
+    component: () => import('../views/Cart.vue')
   },
   {
-    path:'/user',
-    name:'user',
-    component:()=>import('../views/User.vue')
+    path: '/user',
+    name: 'user',
+    component: () => import('../views/User.vue')
   },
   {
-    path:'/login',
-    name:'login',
-    component:()=>import('../views/Login.vue')
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/Login.vue')
   }
 ]
 

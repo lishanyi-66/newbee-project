@@ -6,7 +6,7 @@
 
     <!-- 表单 -->
     <div class="login-input">
-      <van-form @submit="onSubmit">
+      <van-form>
         <van-field
           v-model="username"
           name="用户名"
@@ -77,19 +77,19 @@ import IconSvg from "../components/icon/IconSvg.vue";
 import SimpleHeader from "../components/SimpleHeader";
 export default {
   components: { SimpleHeader, IconSvg },
-  data(){
+  data() {
     return {
-      username:'',
-      password:'',
-      radio:'0'
-    }
+      username: "",
+      password: "",
+      radio: "0",
+    };
   },
-  methods:{
-    clickradio(){
-      this.name=""
-      console.log('点击了')
-    }
-  }
+  methods: {
+    clickradio() {
+      this.name = "";
+      console.log("点击了");
+    },
+  },
 };
 </script>
 
@@ -99,7 +99,7 @@ export default {
   font-size: 12px;
   position: relative;
   height: 100%;
-  padding: .625rem;
+  padding: 0.625rem;
   img {
     width: 120px;
     height: 80px;
@@ -111,13 +111,13 @@ export default {
     font-size: 12px;
   }
   // 背景色实现文字居中线
-  .line-name{
-   height: 1px;
-   border-top: 1px solid #eee;
-   text-align: center;
-  width: 100%;
-   
-    span{
+  .line-name {
+    height: 1px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    width: 100%;
+
+    span {
       position: relative;
       top: -8px;
       background-color: #fff;
@@ -143,7 +143,7 @@ export default {
     width: 100%;
     margin-top: 5.5rem;
   }
-  .login-input{
+  .login-input {
     margin-top: 20px;
   }
 }
